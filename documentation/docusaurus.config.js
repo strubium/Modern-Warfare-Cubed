@@ -58,7 +58,7 @@ const config = {
         title: 'Modern Warfare Cubed Documentation',
         logo: {
           alt: 'Modern Warfare Cubed Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
