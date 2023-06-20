@@ -187,14 +187,8 @@ public class CombatSustainmentBackpack extends ModelBiped {
 		leftleg = new ModelRenderer(this);
 		leftleg.setRotationPoint(2.0F, 12.0F, 0.0F);
 		leftleg.cubeList.add(new ModelBox(leftleg, 24, 16, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
-		
-		bipedLeftArm.isHidden = true;
-		bipedRightArm.isHidden = true;
-		bipedBody = backpack;
-		bipedLeftLeg.isHidden = true;
-		bipedRightLeg.isHidden = true;
-		bipedHead.isHidden = true;
-		bipedHeadwear.isHidden = true;
+
+		hideBiped(this, body);
 	}
 
 	@Override

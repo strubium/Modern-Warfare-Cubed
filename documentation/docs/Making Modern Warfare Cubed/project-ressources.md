@@ -1,4 +1,6 @@
 ---
+pagination_next: null
+pagination_prev: null
 description: Essential resources for collaboration on Modern Warfare Cubed.
 sidebar_position: 0
 ---

@@ -1,4 +1,6 @@
 ---
+pagination_next: null
+pagination_prev: null
 description: Creating custom skins for weapons in Modern Warfare Cubed
 keywords:
   - skins

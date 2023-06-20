@@ -1,4 +1,6 @@
 ---
+pagination_next: null
+pagination_prev: null
 description: Get started with Modern Warfare Cubed
 sidebar_position: 0
 ---
@@ -9,7 +11,7 @@ sidebar_position: 0
 
 The Modern Warfare Cubed documentation is under construction.
 
-Documenting things take time, like **a lot** of time so please be patient.
+Documenting things takes time, like **a lot** of time, so please be patient.
 
 :::
 
