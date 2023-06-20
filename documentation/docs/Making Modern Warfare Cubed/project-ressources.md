@@ -1,5 +1,6 @@
 ---
 description: Essential resources for collaboration on Modern Warfare Cubed.
+sidebar_position: 0
 ---
 
 # Project Resources

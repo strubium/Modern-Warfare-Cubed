@@ -4,27 +4,54 @@
  * work well for content-centric websites.
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Nunito&display=swap');
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #FDCB6E;
-  --ifm-color-primary-dark: #FCB83A;
-  --ifm-color-primary-darker: #FBA607;
-  --ifm-color-primary-darkest: #CC8603;
-  --ifm-color-primary-light: #FDD282;
-  --ifm-color-primary-lighter: #FDDA97;
-  --ifm-color-primary-lightest: #FEE1AC;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Nunito', sans-serif;
+  --ifm-heading-font-family: 'Nunito', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', monospace;
+
+  --ifm-color-primary: #fdcb6e;
+  --ifm-color-primary-dark: #fdbe4a;
+  --ifm-color-primary-darker: #fcb838;
+  --ifm-color-primary-darkest: #fba403;
+  --ifm-color-primary-light: #fdd892;
+  --ifm-color-primary-lighter: #fedea4;
+  --ifm-color-primary-lightest: #fef2d9;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #FDCB6E;
-  --ifm-color-primary-dark: #FCB83A;
-  --ifm-color-primary-darker: #FBA607;
-  --ifm-color-primary-darkest: #CC8603;
-  --ifm-color-primary-light: #FDD282;
-  --ifm-color-primary-lighter: #FDDA97;
-  --ifm-color-primary-lightest: #FEE1AC;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #fdcb6e;
+  --ifm-color-primary-dark: #fdbe4a;
+  --ifm-color-primary-darker: #fcb838;
+  --ifm-color-primary-darkest: #fba403;
+  --ifm-color-primary-light: #fdd892;
+  --ifm-color-primary-lighter: #fedea4;
+  --ifm-color-primary-lightest: #fef2d9;
 }
+
+li.menu__list-item.debug {
+  font-family: 'Fira Code', monospace;
+}
+
+li.menu__list-item.assets {
+  position: relative;
+}
+
+li.menu__list-item.assets::before {
+  content: "Assets";
+  position: absolute;
+  top: 0.1125rem;
+  right: 0.625rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1125rem 0.925rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  background-color: rgba(253, 203, 110, 0.1);
+  color: #fdcb6e;
+  border: 1px solid #fdbe4a;
+}
+

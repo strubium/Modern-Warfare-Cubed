@@ -1,5 +1,12 @@
 ---
 description: Creating custom skins for weapons in Modern Warfare Cubed
+keywords:
+  - skins
+  - custom
+  - mwc
+  - modern
+  - warfare
+  - cubed
 ---
 
 # Custom Skins
