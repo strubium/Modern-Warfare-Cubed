@@ -44,16 +44,25 @@ Props are defined in the TileEntities.java file. Here is an example of a created
         .build(ModernWarfareMod.MOD_CONTEXT);
 
 ### LootBoxConfiguration()
-The framework for a prop. All props are Loot Boxs as the have the function to give loot. 
+The framework for a prop. All props are Loot Boxs as they have the function of giving loot. 
 
 ### .withMaterial()
-Defines what bullet sounds are made when prop is shot.
+Defines what bullet sounds are made when the prop is shot.
 
 ### .withName()
 The name of the prop gets used in its ID. Ex: mwc:supply_drop
 
 ### .withModelClassName()
+The Icon of the prop
 
 ### .withTextureName()
+The texture used to make the prop a 3D model
 
-##
+### .withCreativeTab()
+The creative tab the prop will to stored under. Use PropsTab.
+
+### .withEquipentOption()
+An item that will be given as loot
+
+### .withEquipmentDispenseTimeout()
+The cooldown between giving at item. 
