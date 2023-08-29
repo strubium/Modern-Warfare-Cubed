@@ -61,6 +61,12 @@ The texture used to make the prop a 3D model
 ### .withCreativeTab()
 The creative tab the prop will to stored under. Use PropsTab.
 
+### .withBoundingBox()
+Defines the Bounding box of a prop.
+
+.withBoundingBox(0.3, 0, 0.3, 0.7, 3.5, 0.7)
+.withBoundingBox(x1, y1, z1, x2, y2, z2)
+
 ### .withEquipentOption()
 An item that will be given as loot
 
