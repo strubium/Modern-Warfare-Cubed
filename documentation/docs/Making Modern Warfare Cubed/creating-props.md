@@ -24,7 +24,7 @@ Documenting things takes time, like a lot of time, so please be patient.
 
 :::
 
-Props are definded in the TileEntities.java file. Here is a example of a created prop.
+Props are defined in the TileEntities.java file. Here is an example of a created prop.
 
         new LootBoxConfiguration()
         .withMaterial(Material.WOOD)
@@ -50,7 +50,7 @@ The framework for a prop. All props are Loot Boxs as the have the function to gi
 Defines what bullet sounds are made when prop is shot.
 
 ### .withName()
-Name of the prop, gets used in its ID. Ex: mwc:supply_drop
+The name of the prop gets used in its ID. Ex: mwc:supply_drop
 
 ### .withModelClassName()
 
