@@ -71,10 +71,10 @@ A one-block wide, two-block tall TileEnity
 .withBoundingBox(x1, y1, z1, x2, y2, z2)
 
 ### .withEquipentOption()
-An item that will be given as loot.
+An item that will be given as loot. EnumDifficulty refers to the difficulty of the world and lets you give loot based on the world's difficulty. 
 
 ### .withEquipmentDispenseTimeout()
-The cooldown between giving a .withEquipmentDispenseOption() item. Does nothing by itself.  
+The cooldown between giving a new .withEquipmentDispenseOption() item. Does nothing by itself.  
 
 ### .build()
 Required. Properly closes LootBoxConfiguration. 
