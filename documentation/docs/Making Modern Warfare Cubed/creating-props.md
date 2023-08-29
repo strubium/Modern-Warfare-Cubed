@@ -50,13 +50,13 @@ The framework for a prop. All props are Loot Boxs as they have the function of g
 Defines what bullet sounds are made when the prop is shot.
 
 ### .withName()
-The name of the prop gets used in its ID. Ex: mwc:supply_drop
+The name of the prop gets used in its ID. Ex: .withName(supply_drop) = mwc:supply_drop
 
 ### .withModelClassName()
 The Icon of the prop
 
 ### .withTextureName()
-The texture used to make the prop a 3D model
+The texture used to make the props a 3D model
 
 ### .withCreativeTab()
 The creative tab the prop will to stored under. Use PropsTab.
@@ -64,11 +64,17 @@ The creative tab the prop will to stored under. Use PropsTab.
 ### .withBoundingBox()
 Defines the Bounding box of a prop.
 
-.withBoundingBox(0.3, 0, 0.3, 0.7, 3.5, 0.7)
+.withBoundingBox(0, 0, 0, 1, 2, 1)
+
+A one-block wide, two-block tall TileEnity
+
 .withBoundingBox(x1, y1, z1, x2, y2, z2)
 
 ### .withEquipentOption()
-An item that will be given as loot
+An item that will be given as loot.
 
 ### .withEquipmentDispenseTimeout()
-The cooldown between giving at item. 
+The cooldown between giving a .withEquipmentDispenseOption() item. Does nothing by itself.  
+
+### .build()
+Required. Properly closes LootBoxConfiguration. 
