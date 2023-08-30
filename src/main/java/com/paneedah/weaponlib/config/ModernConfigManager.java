@@ -71,7 +71,7 @@ public class ModernConfigManager {
 	@ConfigSync(category = CATEGORY_RENDERING_SCREENSHADERS, comment = "Configures the intensity of the film grain effect")
 	public static double filmGrainIntensity = 0.025;
 	
-	@ConfigSync(category = CATEGORY_RENDERING_SCREENSHADERS, comment = "Enables glow around bright objects (bloom)")
+	@ConfigSync(category = CATEGORY_RENDERING_SCREENSHADERS, comment = "Enables bloom around bright objects")
 	public static boolean bloomEffect = true;
 	
 	@RequiresMcRestart
@@ -83,7 +83,7 @@ public class ModernConfigManager {
 	public static boolean onScreenRainAndSnow = false;
 	
 	@RequiresMcRestart
-	@ConfigSync(category = CATEGORY_RENDERING, comment = "Enables the HDR framebuffer, requires restart. The HDR is the cause of a lot of shader incompat")
+	@ConfigSync(category = CATEGORY_RENDERING, comment = "Enables the HDR framebuffer. HDR is the cause of a lot of shader incompata")
 	public static boolean enableHDRFramebuffer = true;
 	
 	@ConfigSync(category = CATEGORY_RENDERING, comment = "Enables the fancy MWC snow/rain (BROKEN - CRASHES GAME IF ENABLED)")
@@ -108,14 +108,14 @@ public class ModernConfigManager {
 	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "")
 	public static boolean ammoCounterBackgroundReverse = false;
 
-	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Enable open door key display when hovering doors")
+	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Enable 'open door' display when hovering over doors")
 	public static boolean enableOpenDoorDisplay = true;
 	
 	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "If true, hold to aim. If false, toggle to aim.")
 	public static boolean holdToAim = true;
 
 	@RangeDouble(min=0.0, max=1.0)
-	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Should players bleed when hit?")
+	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "How much should players bleed when hit?")
 	public static double enableBleedingOnHit = 1.0F;
 
 	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Should glass blocks be breakable by bullets?")
@@ -124,20 +124,20 @@ public class ModernConfigManager {
 	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "A list of blocks that will be penetrable by bullets.")
 	public static String penetrableBlocks = "minecraft:glass, minecraft:glass_pane, minecraft:stained_glass, minecraft:stained_glass_pane";
 
-	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Whether entities should have knockback applied to them when shot.")
+	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Should entities have knockback applied to them when shot?")
 	public static boolean knockbackOnHit = true;
 
-	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Enables muzzle effects.")
+	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Enable muzzle effects?")
 	public static boolean enableMuzzleEffects = true;
 
-	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Should blur be applied when aiming?")
+	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Should blur be applied when aiming? (BROKEN - DOES NOTHING)")
 	public static boolean enableBlurOnAim = true;
 
-	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Should the explosion break blocks?")
+	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Should explosions break blocks?")
 	public static boolean explosionBreak = true;
 	
 	@RangeDouble(min=0.0, max=20.0)
-	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "How much damage explosions should deal.")
+	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "How much damage explosions should deal?")
 	public static double explosionDamage = 5.0;
 
 	@RangeDouble(min=0.0, max=1.0)
