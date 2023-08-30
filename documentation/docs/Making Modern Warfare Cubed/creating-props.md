@@ -62,11 +62,7 @@ The texture used to make the props a 3D model
 The creative tab the prop will to stored under. Use PropsTab.
 
 ### .withBoundingBox()
-Defines the Bounding box of a prop.
-
-.withBoundingBox(0, 0, 0, 1, 2, 1)
-
-A one-block wide, two-block tall TileEnity
+Defines the Bounding box of a prop. Ex: .withBoundingBox(0, 0, 0, 1, 2, 1) = A one-block wide, two-block tall TileEnity
 
 .withBoundingBox(x1, y1, z1, x2, y2, z2)
 
