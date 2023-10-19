@@ -169,7 +169,6 @@ public class TileEntities {
         })
         .build(MWC.modContext);
         
-        
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
         .withName("fridge_open")
@@ -373,7 +372,6 @@ public class TileEntities {
             GL11.glRotatef(-90F, 0f, 1f, 0f);
         })
         .build(MWC.modContext);
-        
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
