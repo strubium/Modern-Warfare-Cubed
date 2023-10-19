@@ -1465,7 +1465,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("ServerRackLeft")
+        .withName("server_rack_left")
         .withModelClassName("com.paneedah.mwc.models.ServerRackLeft")
         .withTextureName("textures/models/serverrackleft.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1478,7 +1478,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("ServerRackEmptyLeft")
+        .withName("server_rack_empty_left")
         .withModelClassName("com.paneedah.mwc.models.ServerRackEmptyLeft")
         .withTextureName("textures/models/serverrackemptyright.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1491,7 +1491,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("ServerRackLeftAlt")
+        .withName("server_rack_left_alt")
         .withModelClassName("com.paneedah.mwc.models.ServerRackLeftAlt")
         .withTextureName("textures/models/serverrackleftalt.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1504,7 +1504,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("ServerRackLeftAlt2")
+        .withName("server_rack_left_alt2")
         .withModelClassName("com.paneedah.mwc.models.ServerRackLeftAlt2")
         .withTextureName("textures/models/serverrackleftalt2.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1517,7 +1517,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("ServerRackLeftAlt3")
+        .withName("server_rack_left_alt3")
         .withModelClassName("com.paneedah.mwc.models.ServerRackLeftAlt3")
         .withTextureName("textures/models/serverrackleftalt3.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1530,7 +1530,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("ServerRackEmptyRight")
+        .withName("server_rack_empty_right")
         .withModelClassName("com.paneedah.mwc.models.ServerRackEmptyRight")
         .withTextureName("textures/models/serverrackemptyright.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1543,7 +1543,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("ServerRackRight")
+        .withName("server_rack_right")
         .withModelClassName("com.paneedah.mwc.models.ServerRackRight")
         .withTextureName("textures/models/serverrackright.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1556,7 +1556,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("ServerRackRightAlt")
+        .withName("server_rack_right_alt")
         .withModelClassName("com.paneedah.mwc.models.ServerRackRightAlt")
         .withTextureName("textures/models/serverrackrightalt.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1569,7 +1569,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("ServerRackTopLeft")
+        .withName("server_rack_top_left")
         .withModelClassName("com.paneedah.mwc.models.ServerRackTop")
         .withTextureName("textures/models/serverrackleft.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1604,7 +1604,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("ServerRackTopRight")
+        .withName("server_rack_top_right")
         .withModelClassName("com.paneedah.mwc.models.ServerRackTopRight")
         .withTextureName("textures/models/serverrackleft.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1639,7 +1639,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("DuelFloodLight")
+        .withName("duel_flood_light")
         .withModelClassName("com.paneedah.mwc.models.DuelFloodLight")
         .withTextureName("textures/models/duelfloodlight.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1673,7 +1673,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("FloodLight")
+        .withName("flood_light")
         .withModelClassName("com.paneedah.mwc.models.Floodlight")
         .withTextureName("textures/models/floodlight.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1707,7 +1707,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("Radio_rotated")
+        .withName("radio_rotated")
         .withModelClassName("com.paneedah.mwc.models.Radio")
         .withTextureName("textures/models/radio.png")
         .withCreativeTab(MWC.PROPS_TAB)
@@ -1720,7 +1720,7 @@ public class TileEntities {
         
         new LootBoxConfiguration()
         .withMaterial(Material.IRON)
-        .withName("Radio")
+        .withName("radio")
         .withModelClassName("com.paneedah.mwc.models.Radio")
         .withTextureName("textures/models/radio.png")
         .withCreativeTab(MWC.PROPS_TAB)
