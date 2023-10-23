@@ -92,9 +92,6 @@ item.mwc_usMC_vest_black.name=美国海军陆战队战术背心 (黑色)
 item.mwc_usMC_vest_green.name=美国海军陆战队战术背心 (丛林)
 item.mwc_usMC_vest_urban.name=美国海军陆战队战术背心 (城市)
 
-
-
-
 item.sv98.name=SV-98 狙击步枪
 item.mp5a5.name=HK MP5 冲锋枪
 item.m40a6.name=M40A6 狙击步枪
@@ -878,7 +875,7 @@ item.mwc_MakarovPMSlide.name=PM 套筒
 item.mwc_MakarovPBSlide.name=PB 套筒
 item.mwc_MP443Slide.name=MP443 套筒
 
-item.mwc_FMGcarryhandle.name=FMG-9 提把
+9Gcarryhandle.name=FMG-9 提把
 item.mwc_AR15Iron.name=AR 提把
 
 item.mwc_Bipod.name=脚架
@@ -1147,3 +1144,4 @@ config.entities.soldierHealth.property.name=士兵生命倍率
 
 
 overlay.opendoor.name=开门
+
