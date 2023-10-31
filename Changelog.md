@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project follows to [Ragnarök Versioning Convention](https://gist.github.com/JustDesoroxxx/5d4a45785ce19a6653ba99f72325c703).
+and this project follows to [Ragnarök Versioning Convention](https://gist.github.com/Desoroxxx/5d4a45785ce19a6653ba99f72325c703).
 
 ## [Unreleased] Modern Warfare Cubed Version 0.1 Changelog
 
@@ -11,16 +11,16 @@ and this project follows to [Ragnarök Versioning Convention](https://gist.githu
 
 **If you are upgrading from either Vic's Modern Warfare or Modern Warfare Cubed Version 0.1-Dev-6 or under all Modern Warfare related items, blocks weapons, etc... will disappear from your save either back up your world or start a new one.**
 
-**When updating to this version from an existing world all tan variants of every back as well as the F5 Switchblade will disappear, they aren't being removed then just changed internally**
+**If you are upgrading from Modern Warfare Cubed Version 0.1-Dev-14, all tan variants of every back as well as the F5 Switchblade will disappear, they aren't being removed then just changed internally**
 
-**When updating to this version from an existing world all equipment placed in the equipment inventory will disappear**
+**If you are upgrading from Modern Warfare Cubed Version 0.1-Dev-14, all equipment placed in the equipment inventory will disappear**
 
 ### Highlight
 
 ### Added
 
-- Custom skins ([Create your own skins guide](https://github.com/Cubed-Development/Modern-Warfare-Cubed/wiki/Custom-Skins))
-- Config options:
+- Added custom skins ([Create your own skins guide](https://github.com/Cubed-Development/Modern-Warfare-Cubed/wiki/Custom-Skins))
+- Added new config options:
   - penetratesGlass
   - explosionBreak
   - penetrableBlocks
@@ -42,8 +42,8 @@ and this project follows to [Ragnarök Versioning Convention](https://gist.githu
 - Added the Workbench and the Ammo Press to the Creative Tab
 - Translations for Chinese, Spanish, and Turkish languages
 - GitHub URL in `MCmod.info`
-- Proning in single player mode (**Note: Currently unanimated; player will appear standing**)
-- Custom death Messages when shot with a gun
+- Added proning in single player mode (**Note: Currently unanimated; player will appear standing**)
+- Added custom death Messages when shot with a gun
 - Added status messages for `No ammunition`, `No magazine`, `Tracking`, `Firearm mode`, `Zoom` and `Explodes in`
 - Added the .277 FURY bullet for the NGSW-R
 - Browning Auto 5 now ejects shotgun shells 
@@ -51,6 +51,7 @@ and this project follows to [Ragnarök Versioning Convention](https://gist.githu
 - Added small delay to inputs after closing a GUI to prevent accidentally shooting weapons
 - Added the gold and dark color variants of the Desert Eagle
 - Added Hardness values to props
+- Re-added the USP Match Compensator accessory
 
 ### Changed
 
@@ -126,19 +127,20 @@ and this project follows to [Ragnarök Versioning Convention](https://gist.githu
 - Fixed 7.62x54mm SVD magazine using 7.62x39mm bullets
 - Fixed visual bugs:
   - Fixed 3rd person hovering weapons such as the MP7, CZ-805 Bren, and Python and Taurus revolvers
-  - Fixed m249 accessories floating
-  - The P90 is no longer compatible with the bipod and the magazine of the terminator conversion kit has been fixed
+  - Fixed M249 accessories floating
+  - Fixed the P90 being compatible with the bipod
+  - Fixed the magazine of the terminator conversion kit
   - Fixed the attachment of the Long Deagle
   - Fixed m16 stock and m38 front sight on guns like M4A1, Beowulf .50Cal and AR-10
-  - Fixed visual bugs with grips on the m40a6 and Malyuk
+  - Fixed visual bugs with grips on the M40a6 and Malyuk
   - Fixed visual bugs with sight on the Taurus
   - Fixed Stock visual bugs on Origin-12
-  - Fixed sights like PSO-1 and OKP-7 on ak-74 and ak-101
+  - Fixed sights like PSO-1 and OKP-7 on AK-74 and AK-101
   - Fixed the visual bugs of the F2000
-  - Adjusted when aiming the HK-P12 with the accessories and re-added the USP Match Compensator accessory
+  - Fixed when aiming the HK-P12 with the accessories 
   - Fixed Bipod in ARX-160
   - Fixed Vector Stock Adapter
-  - Adjusted slide recoil on m17
+  - Adjusted slide recoil on M17
   - Fixed muzzle flash for Dragunov, F2000 and AK-101
   - Fixed texture bullet
 - Fixed the attachment of the Long Deagle
@@ -176,7 +178,7 @@ and this project follows to [Ragnarök Versioning Convention](https://gist.githu
 - Fixed the exposure decreasing on the client side even when the game is paused
 - Fixed spectators being able to shoot weapons
 - Fixed the spawning position of the shells
-- Bullet spawning maths which was making the bullets spawn in inaccurate position
+- Fixed bullet spawning math making the bullets spawn in inaccurate position
 
 ### Removed
 
@@ -187,7 +189,7 @@ and this project follows to [Ragnarök Versioning Convention](https://gist.githu
 - Removed most of the compatibility layer
 - Removed FXAA
 - Removed Bloom
-- Deleted broken Hescobastion and UMP45GFL props
+- Removed broken Hescobastion and UMP45GFL props
 - Removed the vanilla ability to disable shaders with F4 (this allowed for flash to be disabled)
 - Removed the `WIP` status of the flashbang as it is fully usable and reliable
 
