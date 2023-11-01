@@ -101,7 +101,6 @@ and this project follows to [Ragnarök Versioning Convention](https://gist.githu
 - Rewritten the rendering system. Items are now positioned correctly everywhere
 - The weapon stats in the modification GUI are now updated instantly
 - Terrorist spawns are now lower by default
-- Flashbangs do not flash trough walls anymore
 
 ### Fixed
 
@@ -179,6 +178,7 @@ and this project follows to [Ragnarök Versioning Convention](https://gist.githu
 - Fixed spectators being able to shoot weapons
 - Fixed the spawning position of the shells
 - Fixed bullet spawning math making the bullets spawn in inaccurate position
+- Fixed flashbangs flashing through walls
 
 ### Removed
 
@@ -197,17 +197,17 @@ and this project follows to [Ragnarök Versioning Convention](https://gist.githu
 
 - As a result of a BIG code cleanup, MWC as a whole should now be slightly faster, load slightly faster and use slightly less resources
 - As a result of the equipment overhaul, MWC should use less ram and lag less when rendering equipment
-- As a result of networking improvements, MWC should use less bandwidth and consume less resources as well as have less latency
-- Losslessly compressed assets as a result, the jar size decreased (35.3MB -> 27.57MB)
+- As a result of networking improvements, MWC should use less bandwidth and consume less resources and have less latency
+- Losslessly compressed assets, as a result, the jar size decreased (35.3MB -> 27.57MB)
 - Improved ShaderLoader
-- Reduced overhead due to the removal of most of the compatibility layer leading to increased performance
+- Reduced overhead due to the removal of most of the compatibility layer
 - Overhauled the networking, MWC as a whole should be more responsive and use less bandwidth
-- Optimized a majority of the models as a result,the jar size decreased (27.57MB -> 21.55MB)
+- Optimized a majority of the models, as a result,the jar size decreased (27.57MB -> 21.55MB)
 
 ### Internal
 
 - Switched to [Raven](https://github.com/eigenraven) amazing [RetroFuturaGradle](https://github.com/GTNewHorizons/RetroFuturaGradle)
-- Now uses Red Core
+- Now requires Red Core
 - Updated to Gradle 8.2
 - Cleaned up build.gradle & gradle.properties
 - Gradle now automatically updates the version and id in `ModReference.java`
