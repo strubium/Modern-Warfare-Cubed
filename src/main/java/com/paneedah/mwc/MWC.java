@@ -15,6 +15,7 @@ import com.paneedah.weaponlib.command.CraftingFileCommand;
 import com.paneedah.weaponlib.command.DebugCommand;
 import com.paneedah.weaponlib.config.BalancePackManager;
 import com.paneedah.weaponlib.crafting.CraftingFileManager;
+import com.paneedah.weaponlib.config.ModernConfigManager;
 import io.redstudioragnarok.redcore.RedCore;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -56,8 +57,7 @@ public final class MWC {
 	public static final CreativeTabs PROPS_TAB = new PropsTab(CreativeTabs.getNextID(), "props");
 	public static final CreativeTabs BLOCKS_AND_INGOTS_TAB = new BlocksTab(CreativeTabs.getNextID(), "blocksAndIngots");
 
-    // Todo: Make this configurable via the future YAML config system from FBP, or Valkyrie integration, the later would be best.
-    public static int bulletHitParticleMult = 6;
+    public static int bulletHitParticleMult =  ModernConfigManager.bulletHitParticleCount;
 
     @SidedProxy(serverSide = "com.paneedah.weaponlib.CommonModContext", clientSide = "com.paneedah.weaponlib.ClientModContext")
     public static ModContext modContext;
