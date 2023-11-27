@@ -115,8 +115,12 @@ public class ModernConfigManager {
 	public static boolean holdToAim = true;
 
 	@RangeDouble(min=0.0, max=1.0)
-	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Should players bleed when hit?")
+	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "How much should players bleed when hit?")
 	public static double enableBleedingOnHit = 1.0F;
+	
+	@RangeInt(min=0, max=10)
+	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "How many particles should appear when a block is shot?")
+	public static double bulletHitParticleCount = 6;
 
 	@ConfigSync(category = CATEGORY_GAMEPLAY, comment = "Should glass blocks be breakable by bullets?")
 	public static boolean bulletBreakGlass = true;
