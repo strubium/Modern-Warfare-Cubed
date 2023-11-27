@@ -27,6 +27,7 @@ public class M134Factory implements GunFactory {
         .withZoom(0.9f)
         .withConfigGroup(GunConfigurationGroup.HEAVY)
         .withMaxShots(Integer.MAX_VALUE)
+        .withMuzzlePosition(new Vec3d(-0.16400000488758082, -1.0, -6.5))
         .withShootSound("m134")
         .withSilencedShootSound("m4a1_silenced")
         .withReloadSound("m4a1_reload")
@@ -34,11 +35,11 @@ public class M134Factory implements GunFactory {
         .withEndOfShootSound("gun_click")
         .withInspectSound("m4a1_inspection")
         .withDrawSound("m4_draw")
-        .withReloadingTime(50)
+        .withReloadingTime(55)
         .withCrosshair("gun")
         .withCrosshairRunning("Running")
         .withCrosshairZoomed("Sight")
-        .withFlashIntensity(0.6f)
+        .withFlashIntensity(1f)
         .withFlashScale(() -> 0.7f)
         .withFlashOffsetX(() -> 0.18f)
         .withFlashOffsetY(() -> 0.2f)
@@ -46,28 +47,33 @@ public class M134Factory implements GunFactory {
         .withShellCasingVerticalOffset(-0.05f)
         .withBleedingCoefficient(7f)
         .withCreativeTab(MWC.WEAPONS_TAB)
-        .withInformationProvider(stack -> Arrays.asList(
-        "Type: Minigun", 
-        "Damage: 10", 
-        "Cartridge: 7.62x51mm NATO",
-        "Fire Rate: AUTO",
-        "Rate of Fire: Excuse me?",
-        "Magazines:",
-        "1000rnd 7.62x51mm Box Magazine"))
-         
+        .withRecoilParam(new RecoilParam(
+        		// The weapon power
+        		65.2,
+        		// Muzzle climb divisor
+        		13.5,
+        		// "Stock Length"
+        		15.5,
+        		// Recovery rate from initial shot
+        		0.625,
+        		// Recovery rate @ "stock"
+        		0.2125,
+        		// Recoil rotation (Y)
+        		0.0,
+        		// Recoil rotation (Z)
+        		0.0,
+        		// Ads similarity divisor
+        		0.3
+        ))
          .withScreenShaking(RenderableState.SHOOTING, 
                  1f, // x 
                  1f, // y
                  2f) // z
          
         .withCompatibleAttachment(Magazines.M134Mag, (model) -> {
-//          GL11.glTranslatef(-0.35F, 0.5F, -1.25F);
-//            GL11.glScaled(1.15F, 1.2F, 1.15F);
         })
         .withCompatibleAttachment(AuxiliaryAttachments.M134Barrels, true, (model) -> {
             GL11.glTranslatef(0F, 0F, 2.4F);
-//            GL11.glTranslatef(0.4F, 0.4F, 0F);
-//            GL11.glRotatef(90F, 0f, 0f, 1);
         })
         .withTextureNames("gun")
         .withRenderer(new WeaponRenderer.Builder()
@@ -267,15 +273,10 @@ public class M134Factory implements GunFactory {
                       }, 250, 1000),
                       new Transition((renderContext) -> {
                           GL11.glTranslatef(-0.01F, 0F, 0F);
-//                      GL11.glRotatef(0F, 0f, 1f, 0f);
-//                      GL11.glScaled(0.55F, 0.55F, 0.55F);
-//                      GL11.glTranslatef(-0.4F, -0.8F, 0.9F);
                     }, 250, 1000),
                     new Transition((renderContext) -> {
                         GL11.glTranslatef(0.3F, 1.7F, 0.1F);
                         GL11.glRotatef(-30F, 0f, 0f, 1f);
-//                  GL11.glScaled(0.55F, 0.55F, 0.55F);
-                        //GL11.glTranslatef(-0.4F, -0.8F, 0.9F);
                   }, 250, 1000)
                     )
                     
