@@ -240,7 +240,6 @@ public final class TileEntities {
                         .withModel(new FilingCabinet(), "filing_cabinet_opened")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -252,7 +251,6 @@ public final class TileEntities {
                         .withModel(new FilingCabinetOpened(), "filing_cabinet_opened")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -264,7 +262,6 @@ public final class TileEntities {
                         .withModel(new ShelfRight(), "shelf")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -276,7 +273,6 @@ public final class TileEntities {
                         .withModel(new ShelfLeft(), "shelf")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -288,7 +284,6 @@ public final class TileEntities {
                         .withModel(new ShelfTop(), "shelf")
                         .withBoundingBox(0, 0, 0, 1, 0.2, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -300,7 +295,6 @@ public final class TileEntities {
                         .withModel(new TV(), "electronics/tv")
                         .withBoundingBox(0, 0, 0, 1, 2, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -314,7 +308,6 @@ public final class TileEntities {
                         .withModel(new TVCeiling(), "electronics/tv_ceiling")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0.4f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -326,7 +319,6 @@ public final class TileEntities {
                         .withModel(new TVCeiling(), "electronics/tv_ceiling")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0.4f, 0.5f);
                             GL11.glRotatef(-45F, 0f, 1f, 0f);
                         }),
@@ -338,7 +330,6 @@ public final class TileEntities {
                         .withModel(new OfficeChair(), "office_chair")
                         .withBoundingBox(0, 0, 0, 1, 0.7, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -350,7 +341,6 @@ public final class TileEntities {
                         .withModel(new OfficeChair2(), "office_chair")
                         .withBoundingBox(0, 0, 0, 1, 0.7, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -386,7 +376,6 @@ public final class TileEntities {
                         .withModel(new DeskLeft(), "desks/desk")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -398,7 +387,6 @@ public final class TileEntities {
                         .withModel(new DeskLeftAlt1(), "desks/desk")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -410,7 +398,6 @@ public final class TileEntities {
                         .withModel(new DeskMiddle(), "desks/desk")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -422,7 +409,6 @@ public final class TileEntities {
                         .withModel(new DeskMiddleAlt1(), "desks/desk_middle_alt_1")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -434,7 +420,6 @@ public final class TileEntities {
                         .withModel(new DeskRight(), "desks/desk")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -446,7 +431,6 @@ public final class TileEntities {
                         .withModel(new DeskRightAlt1(), "desks/desk")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -458,7 +442,6 @@ public final class TileEntities {
                         .withModel(new DeskShelf(), "desks/desk_shelf")
                         .withBoundingBox(0, 0, 0, 1, .6, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -470,7 +453,6 @@ public final class TileEntities {
                         .withModel(new DeskShelfAlt1(), "desks/desk_shelf_alt_1")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -482,7 +464,6 @@ public final class TileEntities {
                         .withModel(new DeskShelfAlt2(), "desks/desk_shelf")
                         .withBoundingBox(0, 0, 0, 1, .6, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -494,7 +475,6 @@ public final class TileEntities {
                         .withModel(new DeskShelfAlt3(), "desks/desk_shelf_alt_3")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -593,7 +573,6 @@ public final class TileEntities {
                         .withModel(new OperatingTable(), "operating_table")
                         .withBoundingBox(0, 0, -0.5, 1, 1.1, 1.5)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -605,7 +584,6 @@ public final class TileEntities {
                         .withModel(new OperatingTableAlt(), "operating_table")
                         .withBoundingBox(0, 0, -0.5, 1, 1, 1.5)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -641,7 +619,6 @@ public final class TileEntities {
                         .withModel(new ForkLiftAlt(), "forklift_alt")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -653,7 +630,6 @@ public final class TileEntities {
                         .withModel(new ForkLiftAlt(), "forklift_alt")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-45F, 0f, 1f, 0f);
                         }),
@@ -665,7 +641,6 @@ public final class TileEntities {
                         .withModel(new Trusses(), "trusses")
                         .withBoundingBox(0, 0.2, 0.4, 1, 0.4, 0.6)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -677,7 +652,6 @@ public final class TileEntities {
                         .withModel(new CeilingLamp(), "lights/ceiling_lamp")
                         .withBoundingBox(0, 0.5, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 1.8f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -689,7 +663,6 @@ public final class TileEntities {
                         .withModel(new CeilingLampAlt(), "lights/ceiling_lamp_alt")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, -0.2f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -701,7 +674,6 @@ public final class TileEntities {
                         .withModel(new Vent(), "vent")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -713,7 +685,6 @@ public final class TileEntities {
                         .withModel(new Vent(), "vent")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 1f, 1.5f);
                             GL11.glRotatef(-90F, 1f, 0f, 0f);
                         }),
@@ -725,7 +696,6 @@ public final class TileEntities {
                         .withModel(new VentCorner(), "vent")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -737,7 +707,6 @@ public final class TileEntities {
                         .withModel(new VentCorner(), "vent")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 1f, 1.5f);
                             GL11.glRotatef(-90F, 1f, 0f, 0f);
                         }),
@@ -749,7 +718,6 @@ public final class TileEntities {
                         .withModel(new VentCorner(), "vent")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 1f, -0.5f);
                             GL11.glRotatef(90F, 1f, 0f, 0f);
                         }),
@@ -761,7 +729,6 @@ public final class TileEntities {
                         .withModel(new VentIntersection(), "vent")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -773,7 +740,6 @@ public final class TileEntities {
                         .withModel(new VentEnd(), "vent")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -785,7 +751,6 @@ public final class TileEntities {
                         .withModel(new WhiteDeskLeft(), "shelf")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -797,7 +762,6 @@ public final class TileEntities {
                         .withModel(new WhiteDeskMiddle(), "shelf")
                         .withBoundingBox(0, 0.95, 0, 1, 1, 0.8)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -809,7 +773,6 @@ public final class TileEntities {
                         .withModel(new WhiteDeskRight(), "shelf")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -850,7 +813,6 @@ public final class TileEntities {
                         .withModel(new ElectricBox(), "electronics/electric_box")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0.8f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -862,7 +824,6 @@ public final class TileEntities {
                         .withModel(new ElectricBoxOpened(), "electronics/electric_box_opened")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0.8f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -874,7 +835,6 @@ public final class TileEntities {
                         .withModel(new HomeChair(), "home_chair")
                         .withBoundingBox(0, 0, 0, 1, 0.7, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -886,7 +846,6 @@ public final class TileEntities {
                         .withModel(new HomeChair(), "home_chair")
                         .withBoundingBox(0, 0, 0, 1, 0.7, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-45F, 0f, 1f, 0f);
                         }),
@@ -898,7 +857,6 @@ public final class TileEntities {
                         .withModel(new OutdoorChair(), "outdoor_chair")
                         .withBoundingBox(0, 0, 0, 1, 0.7, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -910,7 +868,6 @@ public final class TileEntities {
                         .withModel(new OutdoorChair(), "outdoor_chair")
                         .withBoundingBox(0, 0, 0, 1, 0.7, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-45F, 0f, 1f, 0f);
                         }),
@@ -934,7 +891,6 @@ public final class TileEntities {
                         .withModel(new ServerRackLeft(), "servers/server_rack_left")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -946,7 +902,6 @@ public final class TileEntities {
                         .withModel(new ServerRackEmptyLeft(), "servers/server_rack_empty_right")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -958,7 +913,6 @@ public final class TileEntities {
                         .withModel(new ServerRackLeftAlt(), "servers/server_rack_left_alt")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -970,7 +924,6 @@ public final class TileEntities {
                         .withModel(new ServerRackLeftAlt2(), "servers/server_rack_left_alt_2")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -982,7 +935,6 @@ public final class TileEntities {
                         .withModel(new ServerRackLeftAlt3(), "servers/server_rack_left_alt_3")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -994,7 +946,6 @@ public final class TileEntities {
                         .withModel(new ServerRackEmptyRight(), "servers/server_rack_left_alt_3")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1006,7 +957,6 @@ public final class TileEntities {
                         .withModel(new ServerRackRight(), "servers/server_rack_left_alt_3")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1018,7 +968,6 @@ public final class TileEntities {
                         .withModel(new ServerRackRightAlt(), "servers/server_rack_right_alt")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1030,7 +979,6 @@ public final class TileEntities {
                         .withModel(new ServerRackTop(), "servers/server_rack_left")
                         .withBoundingBox(0, 0, 0, 1, 0.3, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1042,7 +990,6 @@ public final class TileEntities {
                         .withModel(new ServerRackTopRight(), "servers/server_rack_right")
                         .withBoundingBox(0, 0, 0, 1, 0.3, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1155,7 +1102,6 @@ public final class TileEntities {
                         .withModel(new FloodlightTowable(), "lights/floodlight_towable")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.3f, 0f, 0.5f);
                             GL11.glRotatef(90F, 0f, 1f, 0f);
                         }),
@@ -1166,7 +1112,6 @@ public final class TileEntities {
                         .withModel(new Sandbag(), "sandbag")
                         .withBoundingBox(0, 0, 0, 1, 0.5, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(90F, 0f, 1f, 0f);
                         }),
@@ -1177,7 +1122,6 @@ public final class TileEntities {
                         .withModel(new SandbagWall(), "sandbag")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(90F, 0f, 1f, 0f);
                         }),
@@ -1189,7 +1133,6 @@ public final class TileEntities {
                         .withModel(new Gravestone(), "gravestone/gravestone")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1201,7 +1144,6 @@ public final class TileEntities {
                         .withModel(new GravestoneSkull(), "gravestone/gravestone_skull")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1213,7 +1155,6 @@ public final class TileEntities {
                         .withModel(new CrossGravestone(), "gravestone/gravestone_cross")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1225,7 +1166,6 @@ public final class TileEntities {
                         .withModel(new CrossGravestone2(), "gravestone/gravestone_cross_2")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1237,7 +1177,6 @@ public final class TileEntities {
                         .withModel(new CrossGravestone3(), "gravestone/gravestone_cross_3")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1249,7 +1188,6 @@ public final class TileEntities {
                         .withModel(new Scarecrow(), "scarecrow")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 0f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1260,7 +1198,6 @@ public final class TileEntities {
                         .withModel(new SpookyGhost(), "ghost/spooky_ghost")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 1.05f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1271,7 +1208,6 @@ public final class TileEntities {
                         .withModel(new SpookyGhost(), "ghost/spooky_ghost_2")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 1.05f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
@@ -1282,7 +1218,6 @@ public final class TileEntities {
                         .withModel(new SpookyGhost(), "ghost/spooky_ghost_3")
                         .withBoundingBox(0, 0, 0, 1, 1, 1)
                         .withPositioning(tileEntity -> {
-                            GL11.glScalef(1f, 1f, 1f);
                             GL11.glTranslatef(0.5f, 1.05f, 0.5f);
                             GL11.glRotatef(-90F, 0f, 1f, 0f);
                         }),
