@@ -219,6 +219,11 @@ public class EntityConfiguration {
             return this;
         }
 
+        public Builder avoidsWater(bool avoidWater) {
+            this.getNavigator().setAvoidsWater(avoidWater);
+            return this;
+        }
+
         public Builder withEntityIdSupplier(Supplier<Integer> entityIdSupplier) {
             this.entityIdSupplier = entityIdSupplier;
             return this;
