@@ -1,7 +1,9 @@
 package com.paneedah.weaponlib;
 
-import akka.japi.Pair;
+import com.paneedah.weaponlib.Pair;
 import com.paneedah.mwc.network.messages.BlockHitMessage;
+import com.paneedah.mwc.utils.ModReference;
+import com.paneedah.weaponlib.BulletHoleRenderer.BulletHole;
 import com.paneedah.weaponlib.animation.ScreenShakeAnimation;
 import com.paneedah.weaponlib.animation.ScreenShakingAnimationManager;
 import com.paneedah.weaponlib.animation.SpecialAttachments;
@@ -46,6 +48,7 @@ import java.util.function.*;
 import java.util.stream.Collectors;
 
 import static com.paneedah.mwc.MWC.CHANNEL;
+import static com.paneedah.mwc.handlers.ClientEventHandler.COOKING_QUEUE;
 import static com.paneedah.mwc.utils.ModReference.ID;
 import static com.paneedah.mwc.utils.ModReference.LOG;
 
@@ -1049,6 +1052,8 @@ public class Weapon extends Item implements PlayerItemInstanceFactory<PlayerWeap
             // Do not register weapons to the registry if they do not
             // have a crafting recipe.
             CraftingRegistry.registerHook(weapon);
+
+            COOKING_QUEUE.add(weapon);
 
             return weapon;
         }
