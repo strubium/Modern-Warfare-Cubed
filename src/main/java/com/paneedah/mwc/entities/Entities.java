@@ -604,10 +604,10 @@ public class Entities {
             .withAmbientSound("hazmatzombie_ambient")
             .withStepSound("zombie_step")
             .withDeathSound("hazmatzombie_death")
-            .withMaxSpeed(0.3F) // 0.1-0.3 is normal speed
+            .withMaxSpeed(0.25F) // 0.1-0.3 is normal speed
             .avoidsWater(true)
             .withAiTask(1, e -> new EntityAISwimming(e))
-            .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, false))
+            .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, true))
             .withAiTask(3, e -> new EntityAIAvoidEntity<>((EntityCreature) e, EntityWolf.class, 6.0F, 1.0D, 1.2D))
             .withAiTask(5, e -> new EntityAIWander((EntityCreature) e, 1.0D))
             .withAiTask(6, e -> new EntityAIWatchClosest(e, EntityPlayer.class, 50.0F))
@@ -653,7 +653,7 @@ public class Entities {
             .withMaxSpeed(0.3F)
             .avoidsWater(true)
             .withAiTask(1, e -> new EntityAISwimming(e))
-            .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, false))
+            .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, true))
             .withAiTask(3, e -> new EntityAIAvoidEntity<>((EntityCreature) e, EntityWolf.class, 6.0F, 1.0D, 1.2D))
             .withAiTask(5, e -> new EntityAIWander((EntityCreature) e, 1.0D))
             .withAiTask(6, e -> new EntityAIWatchClosest(e, EntityPlayer.class, 50.0F))
