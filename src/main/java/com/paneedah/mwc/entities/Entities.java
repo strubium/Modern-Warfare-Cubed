@@ -691,6 +691,7 @@ public class Entities {
             .withCollisionAttackDamage(30.0)
             .withMaxSpeed(0.3F) // 0.1-0.3 is normal speed
             .withPushability(false)
+            .withTrackingRange(200)
             .withAiTask(1, e -> new EntityAISwimming(e))
             .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, true))
             .withAiTask(3, e -> new EntityAIWander(e, 1.0D))

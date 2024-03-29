@@ -221,6 +221,10 @@ public class EntityConfiguration {
             return this;
         }
 
+        public Builder withTrackingRange(int trackingRange) {
+            this.trackingRange = trackingRange;
+            return this;
+        }
         public Builder withEquipmentOption(Item item, EnumDifficulty difficultyLevel, float weight, ItemAttachment<?>...attachments) {
             withEquipmentOption(equipmentOptions, item, difficultyLevel, weight, attachments);
             return this;
@@ -242,10 +246,10 @@ public class EntityConfiguration {
             return this;
         }
 
-        private Builder withEquipmentOption(Map<EquipmentKey, EquipmentValue> equipmentOptions, Item item, EnumDifficulty difficultyLevel, float weight, ItemAttachment<?>... attachments) {
+        private void withEquipmentOption(Map<EquipmentKey, EquipmentValue> equipmentOptions, Item item, EnumDifficulty difficultyLevel, float weight, ItemAttachment<?>... attachments) {
             if(item == null) {
                 LOG.warn("Attempted to configure entity equipment with null item");
-                return this;
+                return;
             }
             Equipment equipment = new Equipment();
             equipment.item = item;
@@ -255,7 +259,6 @@ public class EntityConfiguration {
                 equipmentOptions.put(new EquipmentKey(difficultyValues[i], equipment.item, attachments),
                         new EquipmentValue(equipment, weight));
             }
-            return this;
         }
 
         public Builder withPrimaryEquipmentDropChance(float chance) {
@@ -476,6 +479,7 @@ public class EntityConfiguration {
                         case "zombie":
                         case "zombie_hazmat":
                         case "zombie_defiled":
+                        case "deathclaw":
                             break;
                         default:
                             equipment.item = gun;
@@ -607,7 +611,7 @@ public class EntityConfiguration {
             private static void registerRenderableEntity(ModContext context, Class<? extends Entity> entityClass, List<TexturedModel> texturedModelVariants) {
                 try {
                     ModelBiped model = (ModelBiped) Class.forName(texturedModelVariants.get(0).modelClassName).newInstance();
-                    context.registerRenderableEntity(entityClass, new RenderCustomMob(model));
+                    context.registerRenderableEntity(entityClass, new RenderCustomMob<>(model));
                 } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
                     e.printStackTrace();
 
