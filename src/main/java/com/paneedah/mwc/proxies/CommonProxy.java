@@ -88,7 +88,7 @@ public class CommonProxy {
     public void init(final MWC mod) {
         MWC.modContext.init(mod);
 
-        Entities.init(this);
+        Entities.init();
         Vehicles.init(this);
 
         GameRegistry.registerWorldGenerator(new WorldGeneratorEventHandler(), 0);

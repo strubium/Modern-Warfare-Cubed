@@ -468,6 +468,15 @@ public class EntityConfiguration {
                         case "turretsilenced":
                             equipment.item = Item.REGISTRY.getObject(new ResourceLocation(ID, "turretgunsilenced"));
                             break;
+                        case "zombie_blistered":
+                        case "zombie_ripper":
+                        case "zombie_torn":
+                        case "necromorph":
+                        case "licker":
+                        case "zombie":
+                        case "zombie_hazmat":
+                        case "zombie_defiled":
+                            break;
                         default:
                             equipment.item = gun;
                     }
