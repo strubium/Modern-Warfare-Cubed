@@ -225,6 +225,11 @@ public class EntityConfiguration {
             this.trackingRange = trackingRange;
             return this;
         }
+
+        public Builder withUpdateFrequency(int updateFrequency) {
+            this.updateFrequency = updateFrequency;
+            return this;
+        }
         public Builder withEquipmentOption(Item item, EnumDifficulty difficultyLevel, float weight, ItemAttachment<?>...attachments) {
             withEquipmentOption(equipmentOptions, item, difficultyLevel, weight, attachments);
             return this;

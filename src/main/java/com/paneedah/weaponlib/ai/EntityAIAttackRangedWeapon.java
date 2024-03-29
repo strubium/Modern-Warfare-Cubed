@@ -4,6 +4,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.util.EnumHand;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,9 +23,7 @@ public class EntityAIAttackRangedWeapon extends EntityAIBase
     private int strafingTime = -1;
     private Set<Class<?>> attackWithItemType;
     private float secondaryEquipmentUseChance;
-    
-    private float lookHeightMultiplier;
-    
+
     public EntityAIAttackRangedWeapon(EntityCustomMob customMob,
             double speedAmplifier, int delay, float maxDistance,
             Class<?> ...attackWithItemType) {
@@ -34,14 +33,12 @@ public class EntityAIAttackRangedWeapon extends EntityAIBase
 
 
     public EntityAIAttackRangedWeapon(EntityCustomMob customMob,
-            double speedAmplifier, int delay, float maxDistance, float secondaryEquipmentUseChance, 
+            double speedAmplifier, int delay, float maxDistance, float secondaryEquipmentUseChance,
             Class<?> ...attackWithItemType)
     {
         this.attackWithItemType = new HashSet<>();
-        for(Class<?> c: attackWithItemType) {
-            this.attackWithItemType.add(c);
-        }
-        
+        Collections.addAll(this.attackWithItemType, attackWithItemType);
+
         this.entity = customMob;
         this.moveSpeedAmp = speedAmplifier;
         this.attackCooldown = delay;
@@ -63,9 +60,8 @@ public class EntityAIAttackRangedWeapon extends EntityAIBase
     }
 
     protected boolean isItemTypeInMainHand() {
-        return entity.getHeldItemMainhand() != null
-                && (attackWithItemType.isEmpty() 
-                        || attackWithItemType.stream().anyMatch(a -> a.isInstance(entity.getHeldItemMainhand().getItem())));
+        entity.getHeldItemMainhand();
+        return attackWithItemType.isEmpty() || attackWithItemType.stream().anyMatch(a -> a.isInstance(entity.getHeldItemMainhand().getItem()));
     }
 
     /**
