@@ -15,6 +15,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraftforge.common.BiomeDictionary;
 
+import static net.minecraft.entity.EnumCreatureAttribute.UNDEAD;
+
 public class Entities {
 
     public static void init(CommonProxy commonProxy) {
@@ -324,7 +326,6 @@ public class Entities {
             .withDeathSound("zombie_death")
             .withMaxSpeed(0.3F) // 0.1-0.3 is normal speed
             .withCollisionAttackDamage(15.0)
-            .avoidsWater(true)
             .withAiTask(1, e -> new EntityAISwimming(e))
             .withAiTask(1, e -> new EntityAIFleeSun(e, 1D))
             .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, false))
@@ -372,7 +373,6 @@ public class Entities {
             .withDeathSound("zombie_death")
             .withMaxSpeed(0.3F) // 0.1-0.3 is normal speed
             .withCollisionAttackDamage(10.0)
-            .avoidsWater(true)
             .withAiTask(1, e -> new EntityAISwimming(e))
             .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, false))
             .withAiTask(3, e -> new EntityAIAvoidEntity<>((EntityCreature) e, EntityWolf.class, 6.0F, 1.0D, 1.2D))
@@ -419,7 +419,6 @@ public class Entities {
             .withStepSound("zombie_step")
             .withDeathSound("zombie_death")
             .withMaxSpeed(0.3F)
-            .avoidsWater(true)
             .withAiTask(1, e -> new EntityAISwimming(e))
             .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, false))
             .withAiTask(3, e -> new EntityAIAvoidEntity<>((EntityCreature) e, EntityWolf.class, 6.0F, 1.0D, 1.2D))
@@ -467,7 +466,6 @@ public class Entities {
             .withDeathSound("necromorph_death")
             .withMaxSpeed(0.35F) // 0.1-0.3 is normal speed
             .withCollisionAttackDamage(5.0)
-            .avoidsWater(true)
             .withAiTask(1, e -> new EntityAISwimming(e))
             .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, false))
             .withAiTask(3, e -> new EntityAIAvoidEntity<>((EntityCreature) e, EntityWolf.class, 6.0F, 1.0D, 1.2D))
@@ -559,7 +557,6 @@ public class Entities {
             .withStepSound("zombie_step")
             .withDeathSound("zombie_death")
             .withMaxSpeed(0.3F) // 0.1-0.3 is normal speed
-            .avoidsWater(true)
             .withAiTask(1, e -> new EntityAISwimming(e))
             .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, false))
             .withAiTask(3, e -> new EntityAIAvoidEntity<>((EntityCreature) e, EntityWolf.class, 6.0F, 1.0D, 1.2D))
@@ -605,7 +602,6 @@ public class Entities {
             .withStepSound("zombie_step")
             .withDeathSound("hazmatzombie_death")
             .withMaxSpeed(0.25F) // 0.1-0.3 is normal speed
-            .avoidsWater(true)
             .withAiTask(1, e -> new EntityAISwimming(e))
             .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, true))
             .withAiTask(3, e -> new EntityAIAvoidEntity<>((EntityCreature) e, EntityWolf.class, 6.0F, 1.0D, 1.2D))
@@ -651,7 +647,6 @@ public class Entities {
             .withStepSound("zombie_step")
             .withDeathSound("zombie_death")
             .withMaxSpeed(0.3F)
-            .avoidsWater(true)
             .withAiTask(1, e -> new EntityAISwimming(e))
             .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, true))
             .withAiTask(3, e -> new EntityAIAvoidEntity<>((EntityCreature) e, EntityWolf.class, 6.0F, 1.0D, 1.2D))
@@ -698,7 +693,6 @@ public class Entities {
             .withCollisionAttackDamage(30.0)
             .withMaxSpeed(0.3F) // 0.1-0.3 is normal speed
             .withPushability(false)
-            .avoidsWater(true)
             .withAiTask(1, e -> new EntityAISwimming(e))
             .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, true))
             .withAiTask(3, e -> new EntityAIWander((EntityCreature)e, 1.0D))

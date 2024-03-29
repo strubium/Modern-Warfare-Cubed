@@ -119,18 +119,15 @@ public class EntityConfiguration {
                 if (difficulty != other.difficulty)
                     return false;
                 if (item == null) {
-                    if (other.item != null)
-                        return false;
-                } else if (!item.equals(other.item))
-                    return false;
-                return true;
+                    return other.item == null;
+                } else return item.equals(other.item);
             }
 
         }
 
         private int trackingRange = DEFAULT_TRACKING_RANGE;
         private int updateFrequency = DEFAULT_UPDATE_FREQUENCY;
-        private boolean sendVelocityUpdates = true;
+        private final boolean sendVelocityUpdates = true;
 
         private Supplier<Integer> entityIdSupplier;
         private Map<EquipmentKey, EquipmentValue> equipmentOptions = new HashMap<>();
@@ -216,11 +213,6 @@ public class EntityConfiguration {
 
         public Builder withMaxTolerableLightBrightness(float maxTolerableLightBrightness) {
             this.maxTolerableLightBrightness = maxTolerableLightBrightness;
-            return this;
-        }
-
-        public Builder avoidsWater(bool avoidWater) {
-            this.getNavigator().setAvoidsWater(avoidWater);
             return this;
         }
 
@@ -499,9 +491,7 @@ public class EntityConfiguration {
                     }
                 }
 
-                equipmentOptions.forEach((key, value) -> {
-                    equipmentOptionsBuilder.withOption(value.equipment, key.difficulty, value.weight);
-                });
+                equipmentOptions.forEach((key, value) -> equipmentOptionsBuilder.withOption(value.equipment, key.difficulty, value.weight));
             }
 
             configuration.equipmentOptions = equipmentOptionsBuilder.build();
@@ -550,21 +540,30 @@ public class EntityConfiguration {
                 int weightedProb = spawn.weightedProb;
                 //int weightedProb = (int)(entityConfig.getSpawn());
 
-                if(entityName.equals("terrorist")) {
-                    weightedProb = (int) (spawn.weightedProb * ModernConfigManager.terroristSpawn);
-                    configuration.maxHealth = ModernConfigManager.terroristHealth * maxHealth;
-                }
-                else if(entityName.equals("soldier")) {
-                    weightedProb = (int) (spawn.weightedProb * ModernConfigManager.soldierSpawn);
-                    configuration.maxHealth = ModernConfigManager.soldierHealth * maxHealth;
-                }
-                else if(entityName.equals("zombie_blistered") || entityName.equals("zombie_ripper") || entityName.equals("zombie_torn") || entityName.equals("necromorph") || entityName.equals("licker") || entityName.equals("zombie") || entityName.equals("zombie") || entityName.equals("zombie_hazmat") || entityName.equals("zombie_defiled")) {
-                    weightedProb = (int) (spawn.weightedProb * ModernConfigManager.zombieSpawn);
-                    configuration.maxHealth = ModernConfigManager.zombieHealth * maxHealth;
-                }
-                else if(entityName.equals("deathclaw")) {
-                    weightedProb = (int) (spawn.weightedProb * ModernConfigManager.deathclawSpawn);
-                    configuration.maxHealth = ModernConfigManager.deathclawHealth * maxHealth;
+                switch (entityName) {
+                    case "terrorist":
+                        weightedProb = (int) (spawn.weightedProb * ModernConfigManager.terroristSpawn);
+                        configuration.maxHealth = ModernConfigManager.terroristHealth * maxHealth;
+                        break;
+                    case "soldier":
+                        weightedProb = (int) (spawn.weightedProb * ModernConfigManager.soldierSpawn);
+                        configuration.maxHealth = ModernConfigManager.soldierHealth * maxHealth;
+                        break;
+                    case "zombie_blistered":
+                    case "zombie_ripper":
+                    case "zombie_torn":
+                    case "necromorph":
+                    case "licker":
+                    case "zombie":
+                    case "zombie_hazmat":
+                    case "zombie_defiled":
+                        weightedProb = (int) (spawn.weightedProb * ModernConfigManager.zombieSpawn);
+                        configuration.maxHealth = ModernConfigManager.zombieHealth * maxHealth;
+                        break;
+                    case "deathclaw":
+                        weightedProb = (int) (spawn.weightedProb * ModernConfigManager.deathclawSpawn);
+                        configuration.maxHealth = ModernConfigManager.deathclawHealth * maxHealth;
+                        break;
                 }
                 if(weightedProb > 0) {
                     Set<Biome> biomes = new HashSet<>();
