@@ -47,7 +47,7 @@ public class Entities {
                 .withAiTask(4, e -> new EntityAIAttackRangedWeapon((EntityCustomMob) e, 1.0D, 10, 30.0F))
                 .withAiTask(5, e -> new EntityAIWatchClosest(e, EntityPlayer.class, 50.0F))
                 .withAiTask(6, e -> new EntityAILookIdle(e))
-                .withAiTask(7, e -> new EntityAIPatrol(e, 1, 1))
+                .withAiTask(7, e -> new EntityAIPatrol(e, 1.0, 1))
 
                 .withAiTargetTask(1, e -> new EntityAIHurtByTarget(e, false))
                 .withAiTargetTask(2, e -> new EntityAINearestAttackableTarget<>(e, EntityPlayer.class, true))
@@ -547,7 +547,7 @@ public class Entities {
         new EntityConfiguration.Builder()
             .withName("zombie")
             .withBaseClass(EntityCustomMob.class)
-            .withMaxHealth(30)
+            .withMaxHealth(20)
             .withCreatureAttribute(UNDEAD)
             .withEntityIdSupplier(() -> 10006)
             .withSpawn(50, 80, 150, BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.HILLS)
@@ -561,6 +561,7 @@ public class Entities {
             .withDeathSound("zombie_death")
             .withMaxSpeed(0.3F) // 0.1-0.3 is normal speed
             .withAiTask(1, e -> new EntityAISwimming(e))
+            .withAiTask(1, e -> new EntityAIFleeSun(e, 1))
             .withAiTask(2, e -> new EntityAIAttackMelee(e, 1D, false))
             .withAiTask(3, e -> new EntityAIAvoidEntity<>( e, EntityWolf.class, 6.0F, 1.0D, 1.2D))
             .withAiTask(5, e -> new EntityAIWander( e, 1.0D))
