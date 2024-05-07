@@ -376,6 +376,11 @@ public class EntityConfiguration {
             this.maxAmmo = maxAmmo;
             return this;
         }
+        
+        public Builder withInfiniteAmmo() {
+            this.maxAmmo = 36000000;
+            return this;
+        }
 
         public Builder withCollisionAttack(CustomMobAttack collisionAttack) {
             this.collisionAttack = collisionAttack;
