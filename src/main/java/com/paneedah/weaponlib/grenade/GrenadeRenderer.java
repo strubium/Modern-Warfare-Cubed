@@ -5,7 +5,6 @@ import com.paneedah.weaponlib.*;
 import com.paneedah.weaponlib.animation.*;
 import com.paneedah.weaponlib.animation.DebugPositioner.TransitionConfiguration;
 import com.paneedah.weaponlib.animation.MultipartPositioning.Positioner;
-import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.BufferBuilder;
@@ -538,15 +537,11 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
             });
 
 			if(!firstPersonCustomPositioning.isEmpty() && firstPersonCustomPositioningStrikerLeverOff.isEmpty()) {
-                firstPersonCustomPositioning.forEach((part, pos) -> {
-                    firstPersonCustomPositioningStrikerLeverOff.put(part, new SimplePositioning(null, pos.positioning));
-                });
+                firstPersonCustomPositioning.forEach((part, pos) -> firstPersonCustomPositioningStrikerLeverOff.put(part, new SimplePositioning(null, pos.positioning)));
             }
 
 			if(!firstPersonCustomPositioning.isEmpty() && firstPersonCustomPositioningThrown.isEmpty()) {
-                firstPersonCustomPositioning.forEach((part, pos) -> {
-                    firstPersonCustomPositioningThrown.put(part, new SimplePositioning(null, pos.positioning));
-                });
+                firstPersonCustomPositioning.forEach((part, pos) -> firstPersonCustomPositioningThrown.put(part, new SimplePositioning(null, pos.positioning)));
             }
 
 			return renderer;
@@ -609,7 +604,7 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
 
 	private static class StateManagerKey {
 	    EntityLivingBase player;
-	    int slot = -1;
+	    int slot;
 
         public StateManagerKey(EntityLivingBase player, int slot) {
             this.player = player;
@@ -637,10 +632,8 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
                     return false;
             } else if (!player.equals(other.player))
                 return false;
-            if (slot != other.slot)
-                return false;
-            return true;
-        }
+			return slot == other.slot;
+		}
 
 	}
 
@@ -714,7 +707,6 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
 	    AsyncGrenadeState asyncWeaponState = null;
 		while((asyncWeaponState = playerWeaponState.nextHistoryState()) != null) {
 			if(System.currentTimeMillis() > asyncWeaponState.getTimestamp() + asyncWeaponState.getDuration()) {
-			    continue;
 			} else {
 			    break;
 			}
@@ -809,9 +801,7 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
 				.withPartPositionFunction(Part.MAIN_ITEM, null, createWeaponPartPositionFunction(w))
 				.withPartPositionFunction(Part.LEFT_HAND, null, createWeaponPartPositionFunction(lh))
 				.withPartPositionFunction(Part.RIGHT_HAND, null, createWeaponPartPositionFunction(rh));
-		custom.forEach((part, position) -> {
-			mt.withPartPositionFunction(part, position.attachedTo, createWeaponPartPositionFunction(position.positioning));
-		});
+		custom.forEach((part, position) -> mt.withPartPositionFunction(part, position.attachedTo, createWeaponPartPositionFunction(position.positioning)));
 		return Collections.singletonList(mt);
 	}
 
@@ -924,7 +914,7 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
 	        if(itemAttachment instanceof Part) {
 	            positioner.position((Part) itemAttachment, renderContext);
 	            if(DebugPositioner.isDebugModeEnabled()) {
-	                DebugPositioner.position((Part)itemAttachment, renderContext);
+	                DebugPositioner.position(itemAttachment, renderContext);
 	            }
 	        } else if(itemAttachment.getRenderablePart() != null) {
 	            positioner.position(itemAttachment.getRenderablePart(), renderContext);

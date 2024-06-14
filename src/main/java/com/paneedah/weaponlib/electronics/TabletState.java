@@ -30,15 +30,15 @@ public enum TabletState implements ManagedState<TabletState> {
 	
 	private int priority = DEFAULT_PRIORITY;
 	
-	private TabletState() {
+	TabletState() {
 		this(null, null, null, true);
 	}
 	
-	private TabletState(int priority) {
+	TabletState(int priority) {
 		this(priority, null, null, null, true);
 	}
 	
-	private TabletState(boolean isTransient) {
+	TabletState(boolean isTransient) {
 		this(null, null, null, isTransient);
 	}
 	
@@ -46,11 +46,11 @@ public enum TabletState implements ManagedState<TabletState> {
 //		this(permitRequestedState, transactionFinalState, true);
 //	}
 	
-	private TabletState(TabletState preparingPhase, TabletState permitRequestedState, TabletState transactionFinalState, boolean isTransient) {
+	TabletState(TabletState preparingPhase, TabletState permitRequestedState, TabletState transactionFinalState, boolean isTransient) {
 		this(DEFAULT_PRIORITY, preparingPhase, permitRequestedState, transactionFinalState, isTransient);
 	}
 	
-	private TabletState(int priority, TabletState preparingPhase, TabletState permitRequestedState, TabletState transactionFinalState, boolean isTransient) {
+	TabletState(int priority, TabletState preparingPhase, TabletState permitRequestedState, TabletState transactionFinalState, boolean isTransient) {
 		this.priority = priority;
 		this.preparingPhase = preparingPhase;
 		this.permitRequestedPhase = permitRequestedState;

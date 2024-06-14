@@ -204,16 +204,16 @@ public class PlayerGrenadeInstance extends PlayerItemInstance<GrenadeState> {
     public List<CompatibleAttachment<? extends AttachmentContainer>> getActiveAttachments(RenderContext<RenderableState> renderContext, boolean attached) {
         int[] activeIds = getActiveAttachmentIds();
         List<CompatibleAttachment<? extends AttachmentContainer>> result = new ArrayList<>();
-        for(int i = 0; i < activeIds.length; i++) {
-            if(activeIds[i] == 0) continue;
-            Item item = Item.getItemById(activeIds[i]);
-            if(item instanceof ItemAttachment) {
-                CompatibleAttachment<? extends AttachmentContainer> compatibleAttachment = getWeapon().getCompatibleAttachments().get(item);
-                if(compatibleAttachment != null) {
-                    result.add(compatibleAttachment);
-                }
-            }
-        }
+		for (int activeId : activeIds) {
+			if (activeId == 0) continue;
+			Item item = Item.getItemById(activeId);
+			if (item instanceof ItemAttachment) {
+				CompatibleAttachment<? extends AttachmentContainer> compatibleAttachment = getWeapon().getCompatibleAttachments().get(item);
+				if (compatibleAttachment != null) {
+					result.add(compatibleAttachment);
+				}
+			}
+		}
         return result;
     }
 
