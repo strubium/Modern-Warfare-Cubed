@@ -18,6 +18,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -34,7 +35,6 @@ public class ItemMelee extends Item implements
     public static class Builder {
 
         private static final int DEFAULT_PREPARE_STUB_TIMEOUT = 100;
-
         private static final int DEFAULT_ATTACK_COOLDOWN_TIMEOUT = 500;
         private static final int DEFAULT_HEAVY_ATTACK_COOLDOWN_TIMEOUT = 1000;
 
@@ -248,9 +248,7 @@ public class ItemMelee extends Item implements
     private SoundEvent unloadSound;
     private SoundEvent ejectSpentRoundSound;
 
-    public static enum State {READY, SHOOTING, RELOAD_REQUESTED, RELOAD_CONFIRMED, UNLOAD_STARTED, UNLOAD_REQUESTED_FROM_SERVER, UNLOAD_CONFIRMED, PAUSED, MODIFYING, EJECT_SPENT_ROUND}
-
-    ;
+    public enum State {READY, SHOOTING, RELOAD_REQUESTED, RELOAD_CONFIRMED, UNLOAD_STARTED, UNLOAD_REQUESTED_FROM_SERVER, UNLOAD_CONFIRMED, PAUSED, MODIFYING, EJECT_SPENT_ROUND}
 
     ItemMelee(Builder builder, ModContext modContext) {
         this.builder = builder;
@@ -283,11 +281,13 @@ public class ItemMelee extends Item implements
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public boolean onEntitySwing(EntityLivingBase entityLiving, ItemStack itemStack) {
         return true;
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public void onUpdate(ItemStack itemStack, World world, Entity entity, int p_77663_4_, boolean active) {
     }
 
@@ -298,11 +298,11 @@ public class ItemMelee extends Item implements
 
 
     public static boolean isActiveAttachment(PlayerMeleeInstance weaponInstance, ItemAttachment<ItemMelee> attachment) {
-        return weaponInstance != null ?
-                MeleeAttachmentAspect.isActiveAttachment(attachment, weaponInstance) : false;
+        return weaponInstance != null && MeleeAttachmentAspect.isActiveAttachment(attachment, weaponInstance);
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public int getMaxItemUseDuration(ItemStack itemStack) {
         return 0;
     }
@@ -317,13 +317,13 @@ public class ItemMelee extends Item implements
     }
 
     List<ItemAttachment<ItemMelee>> getCompatibleAttachments(Class<? extends ItemAttachment<ItemMelee>> target) {
-        return builder.compatibleAttachments.entrySet().stream()
-                .filter(e -> target.isInstance(e.getKey()))
-                .map(e -> e.getKey())
+        return builder.compatibleAttachments.keySet().stream()
+                .filter(target::isInstance)
                 .collect(Collectors.toList());
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public void addInformation(ItemStack itemStack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         if (tooltip != null && builder.informationProvider != null) {
             tooltip.addAll(builder.informationProvider.apply(itemStack));
@@ -396,6 +396,7 @@ public class ItemMelee extends Item implements
 //    }
 
     @Override
+    @ParametersAreNonnullByDefault
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase player) {
         //target.attackEntityFrom(DamageSource.fall, builder.damage);
         PlayerItemInstance<?> instance = Tags.getInstance(stack);
@@ -438,11 +439,12 @@ public class ItemMelee extends Item implements
             AttachmentCategory... categories) {
         Collection<CompatibleAttachment<ItemMelee>> c = builder.compatibleAttachments.values();
         List<AttachmentCategory> inputCategoryList = Arrays.asList(categories);
-        return c.stream().filter(e -> inputCategoryList.contains(e)).collect(Collectors.toList());
+        return c.stream().filter(inputCategoryList::contains).collect(Collectors.toList());
     }
 
     // Todo: Remove this method once models are fixed to be at correct height
     @Override
+    @ParametersAreNonnullByDefault
     public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
         return true;
     }

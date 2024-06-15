@@ -657,8 +657,8 @@ public class AnimationModeProcessor {
 		GlStateManager.disableTexture2D();
 		GlStateManager.disableLighting();
 
-		float size = (float) ((float) 0.08f*pan.z);
-		float innerSize = (float) ((float) size - (AnimationModeProcessor.instance.pan.z) * 0.01);
+		float size = (float) (0.08f *pan.z);
+		float innerSize = (float) (size - (AnimationModeProcessor.instance.pan.z) * 0.01);
 		
 		GlStateManager.pushMatrix();
 		//GlStateManager.disableDepth();

@@ -23,15 +23,11 @@ public class VehicleDrivingAspect implements Aspect<VehicleState, EntityVehicle>
 
    // private static Predicate<EntityVehicle> hasMinimalSpeed = vehicle -> vehicle.getSpeed() > 0.01;
     
-    private static Predicate<EntityVehicle> hasMinimalSpeed = vehicle -> vehicle.solver.velocity.length() != 0.0;
+    private static final Predicate<EntityVehicle> hasMinimalSpeed = vehicle -> vehicle.solver.velocity.length() != 0.0;
     
-    private static Predicate<EntityVehicle> movingForwardOrBackward = vehicle -> {
-        return vehicle.isSteeredForward() || vehicle.isSteeredBackward();
-    };
+    private static final Predicate<EntityVehicle> movingForwardOrBackward = vehicle -> vehicle.isSteeredForward() || vehicle.isSteeredBackward();
     
-    private static Predicate<EntityVehicle> isShifting = vehicle -> {
-        return vehicle.isInShift();
-    };
+    private static final Predicate<EntityVehicle> isShifting = EntityVehicle::isInShift;
     
     public static Predicate<EntityVehicle> shiftTime = vehicle -> 
     System.currentTimeMillis() >= 500 + vehicle.getStateUpdateTimestamp();
@@ -43,7 +39,7 @@ public class VehicleDrivingAspect implements Aspect<VehicleState, EntityVehicle>
     public static Predicate<EntityVehicle> toShiftKnobTime = vehicle -> 
     System.currentTimeMillis() >= 50 + vehicle.getStateUpdateTimestamp();
     
-    private static Predicate<EntityVehicle> speedupTimeoutExpired = vehicle ->
+    private static final Predicate<EntityVehicle> speedupTimeoutExpired = vehicle ->
         System.currentTimeMillis() >= 300 + vehicle.getStateUpdateTimestamp();
 
 //    

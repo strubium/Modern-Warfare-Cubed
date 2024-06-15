@@ -1,6 +1,5 @@
 package com.paneedah.weaponlib.vehicle;
 
-import com.paneedah.mwc.utils.ModReference;
 import com.paneedah.weaponlib.EntityClassFactory;
 import com.paneedah.weaponlib.EntityConfiguration;
 import com.paneedah.weaponlib.ModContext;
@@ -88,23 +87,7 @@ public class EntityVehicleConfiguration implements EntityConfiguration {
         private String rev5;
         private String rev6;
 
-        /*
-        private double backwardDeccelerationFactor = DEFAULT_BACKWARD_DECCELERATION_FACTOR;
-        private double forwardDeccelerationFactor = DEFAULT_FORWARD_DECCELERATION_FACTOR;
-        private double accelerationIncrement = DEFAULT_ACCELERATION_INCREMENT;
-        private double minVelocityThreshold = DEFAULT_MIN_VELOCITY_THRESHOLD;
-        private double onGroundFrictionFactor = DEFAULT_ON_GROUND_FRICTION_FACTOR;
-        private double inAirFrictionFactor = DEFAULT_IN_AIR_FRICTION_FACTOR;
-
-        private double unriddenDecceleration = DEFAULT_UNRIDDEN_DECCELERATION;
-        private double inWaterDecceleration = DEFAULT_IN_WATER_DECCELERATION;
-
-*/
-        private int trackingRange = DEFAULT_TRACKING_RANGE;
-        private int updateFrequency = DEFAULT_UPDATE_FREQUENCY;
-        private boolean sendVelocityUpdates = true;
-
-        private Function<Double, Double> speedThreshold = s -> 1.5 * s + 0.07;
+        private final Function<Double, Double> speedThreshold = s -> 1.5 * s + 0.07;
 
         /*
         private double handlingFactor = 5.0;
@@ -112,11 +95,11 @@ public class EntityVehicleConfiguration implements EntityConfiguration {
         private Function<Double, Double> offGroundHandling = s -> 0.015 * s * s * handlingFactor + 0.016 * s * handlingFactor;
 
 */
-        private List<Seat> seats = new ArrayList<>();
+        private final List<Seat> seats = new ArrayList<>();
 
-        private List<VehiclePart> installedParts = new ArrayList<>();
+        private final List<VehiclePart> installedParts = new ArrayList<>();
 
-        private VehicleSuspensionStrategy suspensionStrategy  = new VehicleSuspensionStrategy.StepSuspensionStrategy(
+        private final VehicleSuspensionStrategy suspensionStrategy  = new VehicleSuspensionStrategy.StepSuspensionStrategy(
                 0.01f, 10f, 0.01f,
                 0.1f, 7f, 0.01f,
                 0.3f, 5f, 0.05f);
@@ -346,7 +329,20 @@ public class EntityVehicleConfiguration implements EntityConfiguration {
             Class<? extends Entity> entityClass = EntityClassFactory.getInstance()
                     .generateEntitySubclass(baseClass, modEntityId, configuration);
 
-            net.minecraftforge.fml.common.registry.EntityRegistry.registerModEntity(new ResourceLocation(ID, entityName),entityClass, entityName, modEntityId, context.getMod(), trackingRange, updateFrequency, sendVelocityUpdates);
+            /*
+        private double backwardDeccelerationFactor = DEFAULT_BACKWARD_DECCELERATION_FACTOR;
+        private double forwardDeccelerationFactor = DEFAULT_FORWARD_DECCELERATION_FACTOR;
+        private double accelerationIncrement = DEFAULT_ACCELERATION_INCREMENT;
+        private double minVelocityThreshold = DEFAULT_MIN_VELOCITY_THRESHOLD;
+        private double onGroundFrictionFactor = DEFAULT_ON_GROUND_FRICTION_FACTOR;
+        private double inAirFrictionFactor = DEFAULT_IN_AIR_FRICTION_FACTOR;
+
+        private double unriddenDecceleration = DEFAULT_UNRIDDEN_DECCELERATION;
+        private double inWaterDecceleration = DEFAULT_IN_WATER_DECCELERATION;
+
+*/
+            boolean sendVelocityUpdates = true;
+            net.minecraftforge.fml.common.registry.EntityRegistry.registerModEntity(new ResourceLocation(ID, entityName),entityClass, entityName, modEntityId, context.getMod(), DEFAULT_TRACKING_RANGE, DEFAULT_UPDATE_FREQUENCY, sendVelocityUpdates);
 
             ItemVehicle vehicleItem = new ItemVehicle(entityName, entityClass);
 

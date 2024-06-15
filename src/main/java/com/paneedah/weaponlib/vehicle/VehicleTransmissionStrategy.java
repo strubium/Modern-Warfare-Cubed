@@ -13,7 +13,7 @@ public abstract class VehicleTransmissionStrategy {
     
     public static class Builder {
         
-        private List<DefaultTransmissionStrategy.Gear> gears = new ArrayList<>();
+        private final List<DefaultTransmissionStrategy.Gear> gears = new ArrayList<>();
         private EntityVehicle entity;
         
         public Builder withGear(double minSpeed, SoundEvent sound) {
@@ -50,7 +50,7 @@ public abstract class VehicleTransmissionStrategy {
     public static class DefaultTransmissionStrategy extends VehicleTransmissionStrategy {
         
         private double speed;
-        
+
         private static class Gear implements Comparable<Gear> {
             double minSpeed; // inclusive
             double maxSpeed; // exclusive
@@ -67,9 +67,9 @@ public abstract class VehicleTransmissionStrategy {
 
         @Override
         public void update(double speed) {
-            
-            for(int i = 0; i < gears.length; i++) {
-                if(speed > gears[i].minSpeed) {
+
+            for (Gear gear : gears) {
+                if (speed > gear.minSpeed) {
 //                    this.rate = thresholds[i].rate;
 //                    this.amplitude = thresholds[i].amplitude;
                 } else {

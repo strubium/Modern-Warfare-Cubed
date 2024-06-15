@@ -17,24 +17,22 @@ public class VehicleRendererBuilder extends HierarchicalRendererBuilder<VehicleP
 	private boolean shiftRight = false;
 	
 	
-	private static List<VehiclePart> allParts = Arrays.asList(VehiclePart.MAIN, VehiclePart.WINDOWS,
+	private static final List<VehiclePart> allParts = Arrays.asList(VehiclePart.MAIN, VehiclePart.WINDOWS,
 			VehiclePart.STEERING_WHEEL, VehiclePart.LEFT_HAND, VehiclePart.RIGHT_HAND,
 			VehiclePart.FRONT_LEFT_CONTROL_ARM, VehiclePart.FRONT_RIGHT_CONTROL_ARM, VehiclePart.FRONT_LEFT_WHEEL,
 			VehiclePart.FRONT_RIGHT_WHEEL, VehiclePart.REAR_LEFT_WHEEL, VehiclePart.REAR_RIGHT_WHEEL);
 
-	private static BiConsumer<MultipartRenderStateManager<VehicleRenderableState, SinglePart, PartRenderContext<VehicleRenderableState>>, PartRenderContext<VehicleRenderableState>> DEFAULT_CONTINOUS_STATE_SETTER = (
-			stateManager, renderContext) -> {
-		stateManager.setContinousState(renderContext.getState(), true, false, false);
-	};
+	private static final BiConsumer<MultipartRenderStateManager<VehicleRenderableState, SinglePart, PartRenderContext<VehicleRenderableState>>, PartRenderContext<VehicleRenderableState>> DEFAULT_CONTINOUS_STATE_SETTER = (
+			stateManager, renderContext) -> stateManager.setContinousState(renderContext.getState(), true, false, false);
 /*
 	private static Function<PartRenderContext<VehicleRenderableState>, Float> DEFAULT_TURN_PROGRESS_PROVIDER = context -> 0.5f
 			+ (float) ((EntityVehicle) context.getEntity()).getLastYawDelta() / 20f;
 */
 	
-	private static Function<PartRenderContext<VehicleRenderableState>, Float> DEFAULT_TURN_PROGRESS_PROVIDER = context -> ((EntityVehicle) context.getEntity()).getInterpolatedYawDelta();
+	private static final Function<PartRenderContext<VehicleRenderableState>, Float> DEFAULT_TURN_PROGRESS_PROVIDER = context -> ((EntityVehicle) context.getEntity()).getInterpolatedYawDelta();
 
 	
-	private static Function<PartRenderContext<VehicleRenderableState>, Float> DEFAULT_WHEEL_TURN_PROGRESS_PROVIDER = context -> (float) ((EntityVehicle) context.getEntity()).getInterpolatedWheelRotation();
+	private static final Function<PartRenderContext<VehicleRenderableState>, Float> DEFAULT_WHEEL_TURN_PROGRESS_PROVIDER = context -> (float) ((EntityVehicle) context.getEntity()).getInterpolatedWheelRotation();
 	
 	/*
 	private static Function<PartRenderContext<VehicleRenderableState>, Float> DEFAULT_WHEEL_TURN_PROGRESS_PROVIDER = context -> (float) Math
@@ -53,63 +51,43 @@ public class VehicleRendererBuilder extends HierarchicalRendererBuilder<VehicleP
 	
 	public VehicleRendererBuilder withMainModelProvider(Supplier<VehicleModel> mainModelProvider) {
 		VehicleModel model = mainModelProvider.get();
-		withPartRenderer(VehiclePart.MAIN, renderContext -> {
-			model.render((EntityVehicle) renderContext.getEntity(), 0.0625f);
-		});
+		withPartRenderer(VehiclePart.MAIN, renderContext -> model.render((EntityVehicle) renderContext.getEntity(), 0.0625f));
 		return this;
 	}
 
 	public VehicleRendererBuilder withWindowModelProvider(Supplier<VehicleModel> mainModelProvider) {
 		VehicleModel model = mainModelProvider.get();
-		withPartRenderer(VehiclePart.WINDOWS, renderContext -> {
-			model.render((EntityVehicle) renderContext.getEntity(), 0.0625f);
-		});
+		withPartRenderer(VehiclePart.WINDOWS, renderContext -> model.render((EntityVehicle) renderContext.getEntity(), 0.0625f));
 		return this;
 	}
 
 	public VehicleRendererBuilder withSteeringWheelModelProvider(Supplier<VehicleModel> steeringWheelModelProvider) {
 		VehicleModel steeringWheelModel = steeringWheelModelProvider.get();
-		withPartRenderer(VehiclePart.STEERING_WHEEL, renderContext -> {
-			steeringWheelModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f);
-		});
+		withPartRenderer(VehiclePart.STEERING_WHEEL, renderContext -> steeringWheelModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f));
 		return this;
 	}
 
 	public VehicleRendererBuilder withWheelModelProvider(Supplier<VehicleModel> mainModelProvider) {
 		VehicleModel frontLeftWheelModel = mainModelProvider.get();
-		withPartRenderer(VehiclePart.FRONT_LEFT_WHEEL, renderContext -> {
-
-			frontLeftWheelModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f);
-
-		});
+		withPartRenderer(VehiclePart.FRONT_LEFT_WHEEL, renderContext -> frontLeftWheelModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f));
 
 		VehicleModel frontRightWheelModel = mainModelProvider.get();
-		withPartRenderer(VehiclePart.FRONT_RIGHT_WHEEL, renderContext -> {
-			frontRightWheelModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f);
-		});
+		withPartRenderer(VehiclePart.FRONT_RIGHT_WHEEL, renderContext -> frontRightWheelModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f));
 
 		VehicleModel rearLeftWheelModel = mainModelProvider.get();
-		withPartRenderer(VehiclePart.REAR_LEFT_WHEEL, renderContext -> {
-			rearLeftWheelModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f);
-		});
+		withPartRenderer(VehiclePart.REAR_LEFT_WHEEL, renderContext -> rearLeftWheelModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f));
 
 		VehicleModel rearRightWheelModel = mainModelProvider.get();
-		withPartRenderer(VehiclePart.REAR_RIGHT_WHEEL, renderContext -> {
-			rearRightWheelModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f);
-		});
+		withPartRenderer(VehiclePart.REAR_RIGHT_WHEEL, renderContext -> rearRightWheelModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f));
 		return this;
 	}
 
 	public VehicleRendererBuilder withControlArmModelProvider(Supplier<VehicleModel> controlArmModelProvider) {
 		VehicleModel frontLeftControlArmModel = controlArmModelProvider.get();
-		withPartRenderer(VehiclePart.FRONT_LEFT_CONTROL_ARM, renderContext -> {
-			frontLeftControlArmModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f);
-		});
+		withPartRenderer(VehiclePart.FRONT_LEFT_CONTROL_ARM, renderContext -> frontLeftControlArmModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f));
 
 		VehicleModel frontRightControlArmModel = controlArmModelProvider.get();
-		withPartRenderer(VehiclePart.FRONT_RIGHT_CONTROL_ARM, renderContext -> {
-			frontRightControlArmModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f);
-		});
+		withPartRenderer(VehiclePart.FRONT_RIGHT_CONTROL_ARM, renderContext -> frontRightControlArmModel.render((EntityVehicle) renderContext.getEntity(), 0.0625f));
 		return this;
 	}
 

@@ -121,7 +121,7 @@ public class AnimationData {
 			Vec3d translationKey = null;
 
 			
-			float timeDelta = 0;
+			float timeDelta;
 			if (i != 0) {
 
 				timeDelta = (f - timestamps.get(i - 1)) * PACE;
@@ -371,10 +371,6 @@ public class AnimationData {
 	 */
 	public List<Transition<RenderContext<RenderableState>>> getTransitionListDual(Transform normal, Transform ads, double divisor) {
 		List<Transition<RenderContext<RenderableState>>> transitionList = new ArrayList<>();
-		
-		
-		
-		
 
 		if(!isNull) {
 			
@@ -672,7 +668,7 @@ public class AnimationData {
 					
 					
 				
-			}, (int) Math.round(timestamp));
+			}, Math.round(timestamp));
 			
 			
 			

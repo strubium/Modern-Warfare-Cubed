@@ -36,12 +36,10 @@ public class StatefulRenderers {
     }
     
     private static class LeftHandRenderer<State> implements StatefulRenderer<State> {
-        
-        //private ModelBiped model;
-        private Function<PartRenderContext<State>, Entity> entitySupplier;
+
+        private final Function<PartRenderContext<State>, Entity> entitySupplier;
         
         public LeftHandRenderer(ModelBiped model, Function<PartRenderContext<State>, Entity> entitySupplier) {
-            //this.model = model;
             this.entitySupplier = entitySupplier;
         }
 
@@ -92,12 +90,10 @@ public class StatefulRenderers {
     }
     
     private static class RightHandRenderer<State> implements StatefulRenderer<State> {
-        
-        //private ModelBiped model;
-        private Function<PartRenderContext<State>, Entity> entitySupplier;
+
+        private final Function<PartRenderContext<State>, Entity> entitySupplier;
         
         public RightHandRenderer(ModelBiped model, Function<PartRenderContext<State>, Entity> entitySupplier) {
-            //this.model = model;
             this.entitySupplier = entitySupplier;
         }
 
@@ -109,7 +105,7 @@ public class StatefulRenderers {
                 if(minecraft.gameSettings.thirdPersonView == 0) {
                     minecraft.getTextureManager().bindTexture(((AbstractClientPlayer) entity).getLocationSkin());
 
-                    Render<AbstractClientPlayer> entityRenderObject = MC.getRenderManager().getEntityRenderObject((AbstractClientPlayer)entity);
+                    Render<AbstractClientPlayer> entityRenderObject = MC.getRenderManager().getEntityRenderObject(entity);
                     RenderPlayer render = (RenderPlayer) entityRenderObject;
 
                     ModelBiped model = render.getMainModel();

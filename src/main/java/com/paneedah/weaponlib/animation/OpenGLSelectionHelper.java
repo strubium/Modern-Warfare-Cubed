@@ -37,7 +37,7 @@ public class OpenGLSelectionHelper {
 	/**
 	 * Allows you to select obj behind
 	 * 
-	 * @return
+	 * @return true
 	 */
 	public static boolean shouldRender(int id) {
 		return true;
@@ -51,7 +51,7 @@ public class OpenGLSelectionHelper {
 		if(ballBuf == null) {
 			ballBuf = new Framebuffer(MC.displayWidth, MC.displayHeight, true);
 		}
-		ballBuf.bindFramebuffer(false);;
+		ballBuf.bindFramebuffer(false);
 	}
 	
 	public static void bindSelectBuffer() {
@@ -213,8 +213,7 @@ public class OpenGLSelectionHelper {
 		ByteBuffer buf = readRawColor();
 		// System.out.println(buf.get(0) + " | " + buf.get(1) + " | " + buf.get(2) + " |
 		// " + buf.get(3));
-		int red = buf.get(0) & 0xFF;
-		currentlyHovering = red;
+		currentlyHovering = buf.get(0) & 0xFF;
 		
 		// System.out.println(currentlyHovering);
 		// selectID = 20;

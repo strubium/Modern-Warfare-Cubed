@@ -16,7 +16,7 @@ public class KeyedAnimation {
 	public TreeMap<Float, BlockbenchTransition> bbMap = new TreeMap<>();
 	public float prevTimer = 0.0f;
 	public float timer = 0.0f;
-	public float max = 2.0f;
+	public float max;
 
 
 	public KeyedAnimation(float max) {
@@ -33,7 +33,7 @@ public class KeyedAnimation {
 	}
 	
 	public void doPositioning(float speed) {
-		doPositioning(1.0f, Vec3d.ZERO);
+		doPositioning(speed, Vec3d.ZERO);
 	}
 	
 	public void update(float speed) {

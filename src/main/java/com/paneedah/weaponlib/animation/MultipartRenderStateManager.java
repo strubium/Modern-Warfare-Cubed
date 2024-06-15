@@ -457,14 +457,9 @@ public class MultipartRenderStateManager<State, Part, Context extends PartPositi
 		    Vec3d beezer = new Vec3d(0, 3.5, -1);
 		    
 		    float fastProgress = 0f;
-		    if(!accel) {
-		    	fastProgress =  1 - ((1-progress)*(1-progress));
-		    } else {
-		    	fastProgress =  1 - ((1-progress)*(1-progress));
-		    	//fastProgress =  progress*progress*(3-(2*progress));
-		    }
-		    
-		    float newX = MatrixHelper.solveBeizer(beforeMatrix.m30, (float) beizer.x, afterMatrix.m30, fastProgress);
+			fastProgress =  1 - ((1-progress)*(1-progress));
+
+			float newX = MatrixHelper.solveBeizer(beforeMatrix.m30, (float) beizer.x, afterMatrix.m30, fastProgress);
 		    float newY = MatrixHelper.solveBeizer(beforeMatrix.m31, (float) beizer.y, afterMatrix.m31, fastProgress);
 		    float newZ = MatrixHelper.solveBeizer(beforeMatrix.m32, (float) beizer.z, afterMatrix.m32, fastProgress);
 		  //  Vec3d trans = MatrixHelper.lerpVectors(new Vec3d(beforeMatrix.m30, beforeMatrix.m31, beforeMatrix.m32),

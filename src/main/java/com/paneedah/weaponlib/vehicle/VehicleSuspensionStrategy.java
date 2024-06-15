@@ -6,7 +6,7 @@ public abstract class VehicleSuspensionStrategy {
     
     public static class StepSuspensionStrategy extends VehicleSuspensionStrategy {
         
-        private class Threshold implements Comparable<Threshold>{
+        private static class Threshold implements Comparable<Threshold>{
             float speed;
             float rate;
             float amplitude;
@@ -17,7 +17,7 @@ public abstract class VehicleSuspensionStrategy {
             }
         }
         
-        private Threshold[] thresholds;
+        private final Threshold[] thresholds;
         
         public StepSuspensionStrategy(float...data) {
             if(data.length % 3 != 0) {
@@ -37,10 +37,10 @@ public abstract class VehicleSuspensionStrategy {
         public void update(double speed, double yawDelta) {
             this.amplitude = 0f;
             this.rate = 0f;
-            for(int i = 0; i < thresholds.length; i++) {
-                if(speed > thresholds[i].speed) {
-                    this.rate = thresholds[i].rate;
-                    this.amplitude = thresholds[i].amplitude;
+            for (Threshold threshold : thresholds) {
+                if (speed > threshold.speed) {
+                    this.rate = threshold.rate;
+                    this.amplitude = threshold.amplitude;
                 } else {
                     break;
                 }

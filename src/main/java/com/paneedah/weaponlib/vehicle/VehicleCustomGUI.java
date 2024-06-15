@@ -1,6 +1,5 @@
 package com.paneedah.weaponlib.vehicle;
 
-import com.paneedah.mwc.utils.ModReference;
 import com.paneedah.weaponlib.KeyBindings;
 import com.paneedah.weaponlib.animation.jim.KeyStateAnimator;
 import com.paneedah.weaponlib.render.ScreenRenderer;
@@ -17,7 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.Vec3d;
 import org.lwjgl.opengl.GL11;
 
-import java.awt.Color;
+import java.awt.*;
 
 import static com.paneedah.mwc.proxies.ClientProxy.MC;
 import static com.paneedah.mwc.utils.ModReference.ID;
@@ -62,8 +61,8 @@ public class VehicleCustomGUI extends Gui {
 	 * @param c - The color of the tachometer needle
 	 * @param x - On-screen x-position
 	 * @param y - On-screen y-pos
-	 * @param length
-	 * @param width
+	 * @param length On-screen length
+	 * @param width On-screen width
 	 * @param startAngle
 	 * @param angle
 	 * @param prevAngle
@@ -326,7 +325,7 @@ public class VehicleCustomGUI extends Gui {
 			double actualAngle = bA + (eA-bA)*pA;
 			double cos = -Math.cos(Math.toRadians(actualAngle))*radius;
 			double sin = -Math.sin(Math.toRadians(actualAngle))*radius;
-			int color = 0;
+			int color;
 			if(n < 6) {
 				color = 0xFFFFFF;
 			} else {

@@ -183,8 +183,8 @@ public class ExplosionSmokeFX extends Particle {
 
         SMOKE_GRENADE(SMOKE_GRENADE_SCALE_UPDATE_FUNCTION, SMOKE_GRENADE_ALPHA_UPDATE_FUNCTION);
 
-        private TriFunction<Float, Integer, Integer, Float> scaleUpdateFunction;
-        private TriFunction<Float, Integer, Integer, Float> alphaUpdateFunction;
+        private final TriFunction<Float, Integer, Integer, Float> scaleUpdateFunction;
+        private final TriFunction<Float, Integer, Integer, Float> alphaUpdateFunction;
 
         Behavior(TriFunction<Float, Integer, Integer, Float> scaleUpdateFunction,
                          TriFunction<Float, Integer, Integer, Float> alphaUpdateFunction) {

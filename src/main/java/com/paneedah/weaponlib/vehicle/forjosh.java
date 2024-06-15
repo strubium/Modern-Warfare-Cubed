@@ -13,11 +13,11 @@ public class forjosh {
 	
 	public static ItemStackHandler getVMWSlots(EntityPlayer player)
     {
-        Method m = null;
+        Method m;
         try {
             m = ReflectionHelper.findMethod(Class.forName("com.paneedah.mwc.capabilities.EquipmentCapability"), "getInventory", null, EntityLivingBase.class);
         } catch (Exception e) { return null; }
-        Object inventory = null;
+        Object inventory;
         try {
             inventory = m.invoke(null, player);
         } catch (Exception e) { return null; }

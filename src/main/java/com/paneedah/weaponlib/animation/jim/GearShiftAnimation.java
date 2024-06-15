@@ -33,8 +33,8 @@ public class GearShiftAnimation {
 	}
 	
 	private void setup() {
-		for(int x = 0; x < transitions.size(); ++x) {
-			System.out.println(transitions.get(x));
+		for (Vec3d transition : transitions) {
+			System.out.println(transition);
 		}
 	}
 	
